@@ -1,4 +1,4 @@
-# CS210709 Course Project
+# Face Verification System
 This is the course project for CS210709 Machine Learning at University of Science and Technology of China.
 
 ## Requirements
@@ -8,11 +8,11 @@ This is the course project for CS210709 Machine Learning at University of Scienc
 
 ## Model 
 
-We have implemented LightCNN based on numpy.
+We have implemented LightCNN based on numpy with its pretrained model.
 
 ## Usage
 
-To train the model, you first download the datasets [here](https://github.com/AlfredXiangWu/LightCNN) and configure the following parameters and path(default parameters are preferred)
+To train the model, you first download the datasets [here](https://github.com/AlfredXiangWu/LightCNN) and configure the following parameters and path(default parameters are preferred) in `train.py`
 ```python
     batch_size = 128
     image_h = 128
@@ -35,11 +35,12 @@ And run the following command
 python train.py
 ```
 
-To test the model, you need to configure the following paths
+To test the model, you need to configure the following paths in `test.py`
 ```python
 model_path = 'model'
 test_path = 'train-aligned-label.txt'
 ```
+And run the following command
 ```python
 python test.py
 ```
